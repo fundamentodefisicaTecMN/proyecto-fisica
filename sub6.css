@@ -1,0 +1,234 @@
+/* =====================================================
+   TEMA 01 · SUBTEMA 06
+   ELECTRICIDAD Y MAGNETISMO
+   Cyan + verde neón + violeta
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #17252d;
+    line-height: 1.6;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(0, 255, 255, 0.13), transparent 28%),
+        radial-gradient(circle at 90% 80%, rgba(57, 255, 20, 0.12), transparent 30%),
+        linear-gradient(135deg, #f2fbff, #edfdf7, #f6f2ff);
+    min-height: 100vh;
+}
+
+.encabezado-tema {
+    background:
+        radial-gradient(circle at 15% 30%, rgba(0, 255, 255, 0.27), transparent 30%),
+        radial-gradient(circle at 85% 65%, rgba(57, 255, 20, 0.2), transparent 30%),
+        radial-gradient(circle at 60% 15%, rgba(138, 43, 226, 0.22), transparent 28%),
+        linear-gradient(135deg, #001c35, #003f58, #173c2f);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.22),
+        0 0 30px rgba(0, 255, 255, 0.15);
+}
+
+.numero-encabezado {
+    color: #39ff14;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-shadow:
+        0 0 8px #39ff14,
+        0 0 18px #39ff14;
+}
+
+.encabezado-tema h1 {
+    font-size: 2.7rem;
+    margin: 8px 0;
+}
+
+.encabezado-tema p:last-child {
+    color: #dcfff1;
+}
+
+.contenido-tema {
+    width: min(1100px, 92%);
+    margin: 45px auto;
+}
+
+.informacion-tema {
+    position: relative;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 2px solid #39dfff;
+    box-shadow:
+        0 8px 25px rgba(0, 70, 90, 0.12),
+        0 0 20px rgba(0, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.informacion-tema::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        #00ffff,
+        #39ff14,
+        #8a2be2
+    );
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #39ff14;
+}
+
+.etiqueta-seccion {
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 20px;
+    background: #effff5;
+    color: #168c36;
+    border: 1px solid #39ff14;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.informacion-tema h2,
+.seccion-subtemas h2 {
+    color: #003f58;
+    margin: 15px 0;
+}
+
+.informacion-tema p {
+    margin-bottom: 12px;
+}
+
+.seccion-subtemas {
+    margin-top: 45px;
+}
+
+.descripcion-subtemas {
+    color: #607175;
+    margin-bottom: 22px;
+}
+
+.lista-subtemas {
+    display: grid;
+    gap: 18px;
+}
+
+.tarjeta-subtema {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    background: white;
+    border: 2px solid #c8e9e7;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #17252d;
+    transition: 0.25s ease;
+}
+
+.tarjeta-subtema:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: #effffb;
+    border-color: #39ff14;
+    box-shadow:
+        0 0 8px #00ffff,
+        0 0 18px #00ffff,
+        0 0 30px #39ff14,
+        0 0 50px rgba(57, 255, 20, 0.4);
+}
+
+.numero-subtema {
+    min-width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #003f58,
+        #075985,
+        #3c176e
+    );
+    color: #39ff14;
+    font-weight: 900;
+    box-shadow:
+        0 0 8px #00ffff,
+        0 0 18px rgba(57, 255, 20, 0.6);
+}
+
+.tarjeta-subtema h3 {
+    color: #003f58;
+}
+
+.tarjeta-subtema p {
+    color: #637376;
+}
+
+.flecha-subtema {
+    margin-left: auto;
+    color: #39ff14;
+    font-size: 1.6rem;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.7);
+}
+
+.navegacion-tema {
+    text-align: center;
+}
+
+.boton-regresar {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 13px 28px;
+    border: 2px solid #39ff14;
+    border-radius: 12px;
+    background: #003f58;
+    color: #39ff14;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow:
+        0 0 10px #39ff14,
+        0 0 20px rgba(0, 255, 255, 0.3);
+    transition: 0.25s ease;
+}
+
+.boton-regresar:hover {
+    background: #39ff14;
+    color: #003f58;
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 10px #39ff14,
+        0 0 25px #00ffff,
+        0 0 45px rgba(57, 255, 20, 0.5);
+}
+
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    text-align: center;
+    background: #001c35;
+    color: #d9fff0;
+}
+
+footer p {
+    margin: 3px;
+}
+
+@media (max-width: 650px) {
+    .encabezado-tema h1 {
+        font-size: 2rem;
+    }
+
+    .informacion-tema {
+        padding: 25px;
+    }
+}

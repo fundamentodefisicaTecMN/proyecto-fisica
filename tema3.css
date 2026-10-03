@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #252035;
+    line-height: 1.7;
+
+    background:
+        radial-gradient(circle at top left, rgba(174, 0, 255, 0.16), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(0, 220, 255, 0.13), transparent 30%),
+        linear-gradient(135deg, #f7f0ff, #edf7ff, #ffffff);
+
+    min-height: 100vh;
+}
+
+.encabezado-tema {
+    background:
+        radial-gradient(circle at top right, rgba(255, 0, 190, 0.28), transparent 35%),
+        linear-gradient(135deg, #18002f, #4b0872, #101d59);
+
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+
+    box-shadow:
+        0 5px 25px rgba(90, 0, 120, 0.3);
+}
+
+.numero-encabezado {
+    color: #ff72e1;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.encabezado-tema h1 {
+    font-size: 3rem;
+    margin: 12px 0;
+
+    text-shadow:
+        0 0 8px #ff39d0,
+        0 0 22px rgba(255, 57, 208, 0.7);
+}
+
+.contenido-tema {
+    width: min(1100px, 92%);
+    margin: 50px auto;
+}
+
+.informacion-tema {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+
+    border: 2px solid #d23cff;
+
+    box-shadow:
+        0 8px 25px rgba(100, 30, 130, 0.12),
+        0 0 20px rgba(210, 60, 255, 0.12);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.informacion-tema::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background: linear-gradient(
+        90deg,
+        #ff39d0,
+        #9a3cff,
+        #00d9ff
+    );
+}
+
+.etiqueta-seccion {
+    color: #a322c7;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.informacion-tema h2,
+.seccion-subtemas h2 {
+    color: #42145e;
+    margin: 12px 0 15px;
+}
+
+.informacion-tema p {
+    margin-bottom: 15px;
+}
+
+.seccion-subtemas {
+    margin-top: 45px;
+}
+
+.descripcion-subtemas {
+    color: #625c6d;
+    margin-bottom: 25px;
+}
+
+.lista-subtemas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-subtema {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    background: white;
+    padding: 25px;
+
+    border: 2px solid #dbc5e5;
+    border-radius: 16px;
+
+    text-decoration: none;
+    color: inherit;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 6px 18px rgba(80, 30, 100, 0.07);
+}
+
+.tarjeta-subtema:hover {
+    transform: translateY(-7px);
+
+    border-color: #ff39d0;
+
+    box-shadow:
+        0 0 10px rgba(255, 57, 208, 0.45),
+        0 0 25px rgba(0, 217, 255, 0.18);
+}
+
+.numero-subtema {
+    min-width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #4b0872;
+    color: #ff72e1;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 0 12px rgba(255, 114, 225, 0.5);
+}
+
+.tarjeta-subtema h3 {
+    color: #42145e;
+    margin-bottom: 4px;
+}
+
+.tarjeta-subtema p {
+    color: #686273;
+    font-size: 0.95rem;
+}
+
+.flecha-subtema {
+    margin-left: auto;
+
+    font-size: 1.5rem;
+    color: #c62ce8;
+
+    transition: 0.3s ease;
+}
+
+.tarjeta-subtema:hover .flecha-subtema {
+    transform: translateX(7px);
+    color: #ff39d0;
+}
+
+.boton-regresar {
+    display: inline-block;
+
+    margin-top: 40px;
+    padding: 13px 28px;
+
+    border: 2px solid #ff72e1;
+    border-radius: 12px;
+
+    background: #32004d;
+    color: #ff72e1;
+
+    text-decoration: none;
+    font-weight: 700;
+
+    box-shadow:
+        0 0 8px rgba(255, 114, 225, 0.45);
+
+    transition: 0.25s ease;
+}
+
+.boton-regresar:hover {
+    background: #ff72e1;
+    color: #32004d;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 10px #ff72e1,
+        0 0 25px #ff72e1,
+        0 0 45px rgba(0, 217, 255, 0.4);
+}
+
+footer {
+    margin-top: 60px;
+    padding: 30px;
+
+    text-align: center;
+
+    background: #18002f;
+    color: #e6d4ed;
+}
+
+footer p {
+    margin: 4px;
+}
+
+@media (max-width: 700px) {
+
+    .encabezado-tema h1 {
+        font-size: 2.2rem;
+    }
+
+    .informacion-tema {
+        padding: 28px 22px;
+    }
+
+    .lista-subtemas {
+        grid-template-columns: 1fr;
+    }
+}

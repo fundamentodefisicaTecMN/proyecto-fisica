@@ -1,0 +1,223 @@
+/* =====================================================
+   TEMA 01 · SUBTEMA 05
+   ONDAS Y ÓPTICA
+   Violeta + rosa + cyan
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #292238;
+    line-height: 1.6;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.12), transparent 28%),
+        radial-gradient(circle at 80% 75%, rgba(200, 0, 255, 0.13), transparent 30%),
+        linear-gradient(135deg, #f7f8ff, #f2efff, #fff5fc);
+    min-height: 100vh;
+}
+
+.encabezado-tema {
+    background:
+        radial-gradient(circle at 15% 30%, rgba(0, 255, 255, 0.22), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(255, 0, 204, 0.25), transparent 35%),
+        linear-gradient(135deg, #111044, #33206b, #68185e);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.23);
+}
+
+.numero-encabezado {
+    color: #66ffff;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff;
+}
+
+.encabezado-tema h1 {
+    font-size: 2.7rem;
+    margin: 8px 0;
+}
+
+.encabezado-tema p:last-child {
+    color: #f0e8ff;
+}
+
+.contenido-tema {
+    width: min(1100px, 92%);
+    margin: 45px auto;
+}
+
+.informacion-tema {
+    position: relative;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 2px solid #b83dff;
+    box-shadow:
+        0 8px 25px rgba(70, 30, 100, 0.12),
+        0 0 22px rgba(184, 61, 255, 0.18);
+    overflow: hidden;
+}
+
+.informacion-tema::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        #00ffff,
+        #8a2be2,
+        #ff1493
+    );
+    box-shadow: 0 0 16px #c43dff;
+}
+
+.etiqueta-seccion {
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 20px;
+    background: #f7efff;
+    color: #7924a8;
+    border: 1px solid #b83dff;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.informacion-tema h2,
+.seccion-subtemas h2 {
+    color: #352064;
+    margin: 15px 0;
+}
+
+.informacion-tema p {
+    margin-bottom: 12px;
+}
+
+.seccion-subtemas {
+    margin-top: 45px;
+}
+
+.descripcion-subtemas {
+    color: #6b6377;
+    margin-bottom: 22px;
+}
+
+.lista-subtemas {
+    display: grid;
+    gap: 18px;
+}
+
+.tarjeta-subtema {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    background: white;
+    border: 2px solid #dfd0ec;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #292238;
+    transition: 0.25s ease;
+}
+
+.tarjeta-subtema:hover {
+    transform: translateY(-8px);
+    background: #fcf5ff;
+    border-color: #ff1493;
+    box-shadow:
+        0 0 8px #00ffff,
+        0 0 18px #8a2be2,
+        0 0 30px #ff1493,
+        0 0 50px rgba(255, 20, 147, 0.35);
+}
+
+.numero-subtema {
+    min-width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #352064, #8a2be2);
+    color: #66ffff;
+    font-weight: 900;
+    box-shadow:
+        0 0 9px #00ffff,
+        0 0 20px rgba(138, 43, 226, 0.6);
+}
+
+.tarjeta-subtema h3 {
+    color: #352064;
+}
+
+.tarjeta-subtema p {
+    color: #6d6879;
+}
+
+.flecha-subtema {
+    margin-left: auto;
+    color: #ff1493;
+    font-size: 1.6rem;
+}
+
+.navegacion-tema {
+    text-align: center;
+}
+
+.boton-regresar {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 13px 28px;
+    border: 2px solid #ff1493;
+    border-radius: 12px;
+    background: #352064;
+    color: #66ffff;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 20px rgba(255, 20, 147, 0.4);
+    transition: 0.25s ease;
+}
+
+.boton-regresar:hover {
+    background: #ff1493;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 25px #ff1493,
+        0 0 45px rgba(255, 20, 147, 0.5);
+}
+
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    text-align: center;
+    background: #111044;
+    color: #e8ddff;
+}
+
+footer p {
+    margin: 3px;
+}
+
+@media (max-width: 650px) {
+    .encabezado-tema h1 {
+        font-size: 2rem;
+    }
+
+    .informacion-tema {
+        padding: 25px;
+    }
+}

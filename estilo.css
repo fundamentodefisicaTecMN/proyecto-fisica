@@ -1,0 +1,375 @@
+/* =========================================
+   PROYECTO DE FÍSICA
+   ESTILO GENERAL
+   PORTADA
+========================================= */
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.portada {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(circle at top left, rgba(0, 188, 212, 0.25), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(0, 119, 182, 0.30), transparent 35%),
+        linear-gradient(135deg, #001f3f, #003b5c, #006d77);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Decoraciones de fondo */
+
+.portada::before {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border: 2px solid rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+
+    top: -120px;
+    left: -100px;
+}
+
+.portada::after {
+    content: "";
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    bottom: -200px;
+    right: -150px;
+}
+
+
+/* =========================================
+   TARJETA PRINCIPAL
+========================================= */
+
+.portada-contenido {
+    width: 100%;
+    max-width: 900px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35);
+
+    position: relative;
+    z-index: 2;
+
+    animation: aparecer 0.8s ease;
+}
+
+
+/* Animación de entrada */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   LOGOTIPO
+========================================= */
+
+.logo-contenedor {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+.portada-contenido h1 {
+    color: #003b5c;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.portada-contenido h2 {
+    color: #007c83;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+.portada-contenido h3 {
+    color: #003b5c;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   LÍNEA DECORATIVA
+========================================= */
+
+.linea {
+    width: 90px;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #00a6a6,
+        #0077b6
+    );
+
+    border-radius: 10px;
+
+    margin: 0 auto 25px auto;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
+
+.descripcion-portada {
+    max-width: 650px;
+
+    margin: 0 auto 30px auto;
+
+    color: #52606d;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   DATOS DEL EQUIPO
+========================================= */
+
+.datos-equipo {
+    background: #f3f7fa;
+
+    border-left: 5px solid #00a6a6;
+
+    padding: 25px 30px;
+
+    margin-top: 25px;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.datos-equipo h3 {
+    text-align: center;
+
+    font-size: 20px;
+
+    color: #003b5c;
+
+    margin-bottom: 20px;
+}
+
+.datos-equipo p {
+    margin: 8px 0;
+
+    color: #374151;
+}
+
+.datos-equipo strong {
+    color: #003b5c;
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.boton-principal {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 32px;
+
+    background: linear-gradient(
+        135deg,
+        #007c83,
+        #00a6a6
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 124, 131, 0.30);
+
+    transition: all 0.3s ease;
+}
+
+.boton-principal:hover {
+    transform: translateY(-4px);
+
+    background: linear-gradient(
+        135deg,
+        #006b73,
+        #008f8f
+    );
+
+    box-shadow:
+        0 12px 25px rgba(0, 124, 131, 0.40);
+}
+
+.boton-principal:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ADAPTACIÓN PARA CELULARES
+========================================= */
+
+@media (max-width: 700px) {
+
+    .portada {
+        padding: 25px 15px;
+    }
+
+    .portada-contenido {
+        padding: 35px 22px;
+    }
+
+    .portada-contenido h1 {
+        font-size: 27px;
+    }
+
+    .portada-contenido h2 {
+        font-size: 19px;
+    }
+
+    .portada-contenido h3 {
+        font-size: 21px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .datos-equipo {
+        padding: 20px;
+    }
+
+    .boton-principal {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 400px) {
+
+    .portada-contenido {
+        padding: 28px 17px;
+    }
+
+    .portada-contenido h1 {
+        font-size: 23px;
+    }
+
+    .portada-contenido h2 {
+        font-size: 17px;
+    }
+
+    .descripcion-portada {
+        font-size: 14px;
+    }
+
+}

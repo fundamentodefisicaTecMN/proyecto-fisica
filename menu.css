@@ -1,0 +1,749 @@
+/* =========================================
+   PROYECTO DE FÍSICA
+   ESTILO GENERAL
+   INSTITUTO TECNOLÓGICO DE TUXTLA GUTIÉRREZ
+========================================= */
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.portada {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(0, 188, 212, 0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(0, 119, 182, 0.30),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #001f3f,
+            #003b5c,
+            #006d77
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Decoraciones de fondo */
+
+.portada::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border: 2px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 50%;
+
+    top: -120px;
+    left: -100px;
+}
+
+.portada::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border: 2px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    bottom: -200px;
+    right: -150px;
+}
+
+
+/* =========================================
+   TARJETA PRINCIPAL DE LA PORTADA
+========================================= */
+
+.portada-contenido {
+    width: 100%;
+    max-width: 900px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35);
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: aparecer 0.8s ease;
+}
+
+
+/* Animación de entrada */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   LOGOTIPO
+========================================= */
+
+.logo-contenedor {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   TÍTULOS DE LA PORTADA
+========================================= */
+
+.portada-contenido h1 {
+    color: #003b5c;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.portada-contenido h2 {
+    color: #007c83;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+.portada-contenido h3 {
+    color: #003b5c;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   LÍNEA DECORATIVA
+========================================= */
+
+.linea {
+    width: 90px;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #00a6a6,
+        #0077b6
+    );
+
+    border-radius: 10px;
+
+    margin: 0 auto 25px auto;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN DE LA PORTADA
+========================================= */
+
+.descripcion-portada {
+    max-width: 650px;
+
+    margin: 0 auto 30px auto;
+
+    color: #52606d;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   DATOS DEL EQUIPO
+========================================= */
+
+.datos-equipo {
+    background: #f3f7fa;
+
+    border-left: 5px solid #00a6a6;
+
+    padding: 25px 30px;
+
+    margin-top: 25px;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.datos-equipo h3 {
+    text-align: center;
+
+    font-size: 20px;
+
+    color: #003b5c;
+
+    margin-bottom: 20px;
+}
+
+.datos-equipo p {
+    margin: 8px 0;
+
+    color: #374151;
+}
+
+.datos-equipo strong {
+    color: #003b5c;
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL DE LA PORTADA
+========================================= */
+
+.boton-principal {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 32px;
+
+    background: linear-gradient(
+        135deg,
+        #007c83,
+        #00a6a6
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 124, 131, 0.30);
+
+    transition: all 0.3s ease;
+}
+
+.boton-principal:hover {
+    transform: translateY(-4px);
+
+    background: linear-gradient(
+        135deg,
+        #006b73,
+        #008f8f
+    );
+
+    box-shadow:
+        0 12px 25px rgba(0, 124, 131, 0.40);
+}
+
+.boton-principal:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ENCABEZADO DEL MENÚ DE TEMAS
+========================================= */
+
+.encabezado-temas {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(0, 188, 212, 0.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #001f3f,
+            #003b5c,
+            #006d77
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 55px 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.20);
+}
+
+.encabezado-temas h1 {
+    font-size: 38px;
+
+    margin-bottom: 8px;
+}
+
+.encabezado-temas p {
+    font-size: 18px;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   CONTENEDOR DEL MENÚ
+========================================= */
+
+.menu-temas {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    text-align: center;
+}
+
+.menu-temas h2 {
+    color: #003b5c;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.texto-menu {
+    color: #64748b;
+
+    margin-bottom: 35px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   TARJETAS DE LOS TEMAS
+========================================= */
+
+.tarjetas-temas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   TARJETA INDIVIDUAL - EFECTO NEÓN
+========================================= */
+
+.tarjeta-tema {
+    position: relative;
+
+    background: #ffffff;
+
+    padding: 35px 30px;
+
+    min-height: 280px;
+
+    border-radius: 18px;
+
+    border: 2px solid #00d9ff;
+
+    text-decoration: none;
+
+    text-align: left;
+
+    box-shadow:
+        0 0 8px rgba(0, 217, 255, 0.35),
+        0 0 20px rgba(0, 217, 255, 0.15);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* Línea superior de las tarjetas */
+
+.tarjeta-tema::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #00d9ff,
+        #00ffff,
+        #0077ff
+    );
+}
+
+
+/* =========================================
+   NÚMERO DEL TEMA
+========================================= */
+
+.numero-tema {
+    display: block;
+
+    color: #00a6a6;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   TÍTULO DE LA TARJETA
+========================================= */
+
+.tarjeta-tema h3 {
+    color: #003b5c;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN DE LA TARJETA
+========================================= */
+
+.tarjeta-tema p {
+    color: #5b6770;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   TEXTO "VER TEMA"
+========================================= */
+
+.ver-tema {
+    color: #007c83;
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   EFECTO NEÓN AL PASAR EL MOUSE
+========================================= */
+
+.tarjeta-tema:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 10px #00d9ff,
+        0 0 25px #00d9ff,
+        0 0 50px rgba(0, 217, 255, 0.45);
+}
+
+.tarjeta-tema:hover .ver-tema {
+
+    color: #003b5c;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================
+   BOTÓN VOLVER - NEÓN
+========================================= */
+
+.boton-regresar {
+
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 13px 28px;
+
+    border: 2px solid #00ffff;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: #00ffff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 0 8px rgba(0, 255, 255, 0.45),
+        0 0 18px rgba(0, 255, 255, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* Efecto al tocar el botón */
+
+.boton-regresar:hover {
+
+    background: #00ffff;
+
+    color: #003b5c;
+
+    transform:
+        translateY(-5px)
+        scale(1.04);
+
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 25px #00ffff,
+        0 0 45px rgba(0, 255, 255, 0.55);
+}
+
+
+/* Efecto al presionarlo */
+
+.boton-regresar:active {
+
+    transform:
+        translateY(2px)
+        scale(0.97);
+
+    box-shadow:
+        0 0 6px #00ffff;
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+
+    background: #002b45;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 15px;
+
+    margin-top: 70px;
+}
+
+footer p {
+    margin: 4px;
+}
+
+
+/* =========================================
+   DISEÑO PARA CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* PORTADA */
+
+    .portada {
+        padding: 25px 15px;
+    }
+
+    .portada-contenido {
+        padding: 35px 22px;
+    }
+
+    .portada-contenido h1 {
+        font-size: 27px;
+    }
+
+    .portada-contenido h2 {
+        font-size: 19px;
+    }
+
+    .portada-contenido h3 {
+        font-size: 21px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .datos-equipo {
+        padding: 20px;
+    }
+
+    .boton-principal {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+
+    /* MENÚ */
+
+    .encabezado-temas {
+        padding: 40px 20px;
+    }
+
+    .encabezado-temas h1 {
+        font-size: 28px;
+    }
+
+    .encabezado-temas p {
+        font-size: 16px;
+    }
+
+    .menu-temas {
+        width: 92%;
+    }
+
+    .menu-temas h2 {
+        font-size: 27px;
+    }
+
+    .tarjetas-temas {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-tema {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 400px) {
+
+    .portada-contenido {
+        padding: 28px 17px;
+    }
+
+    .portada-contenido h1 {
+        font-size: 23px;
+    }
+
+    .portada-contenido h2 {
+        font-size: 17px;
+    }
+
+    .descripcion-portada {
+        font-size: 14px;
+    }
+
+}
