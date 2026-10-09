@@ -1,186 +1,230 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Temas - Proyecto de Física</title>
+    <title>Explorar temas | Fundamentos de Física</title>
 
-    <!-- Conexión con el CSS general -->
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="temas.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         ENCABEZADO
-    ========================== -->
+    <!-- Fondo animado -->
+    <div class="fondo-menu" aria-hidden="true">
+        <div class="luz-fondo luz-uno"></div>
+        <div class="luz-fondo luz-dos"></div>
+        <div class="rejilla-menu"></div>
+        <canvas id="particulas-menu"></canvas>
+    </div>
 
-    <header class="encabezado-temas">
+    <!-- Navegación superior -->
+    <header class="barra-menu">
+        <a href="index.html" class="marca-menu">
+            <span class="simbolo-marca">Φ</span>
+            <span>FUNDAMENTOS <b>DE FÍSICA</b></span>
+        </a>
 
-        <h1>Fundamentos de Física</h1>
-
-        <p>
-            Selecciona un tema para comenzar
-        </p>
-
+        <a href="index.html" class="enlace-inicio">
+            <span>↖</span> PORTADA
+        </a>
     </header>
 
+    <main class="contenido-menu">
 
-    <!-- =========================
-         CONTENIDO PRINCIPAL
-    ========================== -->
+        <!-- Encabezado -->
+        <section class="introduccion">
+            <p class="etiqueta">
+                <span class="punto-activo"></span>
+                INSTITUTO TECNOLÓGICO DE TUXTLA GUTIÉRREZ
+            </p>
 
-    <main class="menu-temas">
+            <h1>
+                EXPLORA EL
+                <span>UNIVERSO <i>FÍSICO</i></span>
+            </h1>
 
-        <h2>
-            Temas principales
-        </h2>
+            <p class="subtitulo">
+                Cuatro perspectivas para comprender las leyes que
+                gobiernan la materia, la energía, el espacio y el tiempo.
+            </p>
 
-        <p class="texto-menu">
-            Explora los cuatro temas fundamentales
-            del proyecto.
-        </p>
+            <div class="linea-decorativa">
+                <span></span>
+                <i>✦</i>
+                <span></span>
+            </div>
+        </section>
 
+        <!-- Tarjetas de los cuatro temas -->
+        <section class="seccion-temas">
 
-        <!-- =========================
-             TARJETAS DE LOS TEMAS
-        ========================== -->
+            <div class="encabezado-seccion">
+                <div>
+                    <p class="mini-etiqueta">RUTA DE APRENDIZAJE</p>
+                    <h2>Selecciona un tema</h2>
+                </div>
 
-        <div class="tarjetas-temas">
+                <p class="contador-temas">01 — 04</p>
+            </div>
 
+            <div class="rejilla-temas">
 
-            <!-- TEMA 1 -->
+                <!-- Tema 1 -->
+                <a href="tema1.html" class="tarjeta tarjeta-clasica">
+                    <div class="tarjeta-superior">
+                        <span class="numero">01</span>
+                        <span class="icono-tema">⚙</span>
+                        <span class="indicador">↗</span>
+                    </div>
 
-            <a href="tema1.html" class="tarjeta-tema">
+                    <div class="arte arte-clasica" aria-hidden="true">
+                        <div class="orbita-arte orbita-a"></div>
+                        <div class="orbita-arte orbita-b"></div>
+                        <div class="nucleo"></div>
+                        <span class="particula-arte particula-a"></span>
+                        <span class="particula-arte particula-b"></span>
+                        <span class="particula-arte particula-c"></span>
+                    </div>
 
-                <span class="numero-tema">
-                    01
-                </span>
+                    <div class="tarjeta-contenido">
+                        <p class="categoria">MOVIMIENTO Y FUERZAS</p>
+                        <h3>Física clásica</h3>
+                        <p>
+                            Descubre los principios del movimiento,
+                            la energía, las ondas y el electromagnetismo.
+                        </p>
 
-                <h3>
-                    Física clásica
-                </h3>
+                        <div class="pie-tarjeta">
+                            <span>EXPLORAR TEMA</span>
+                            <span class="flecha">⟶</span>
+                        </div>
+                    </div>
+                </a>
 
-                <p>
-                    Conoce los fundamentos de la física
-                    desarrollados principalmente entre
-                    los siglos XVII y XIX.
-                </p>
+                <!-- Tema 2 -->
+                <a href="tema2.html" class="tarjeta tarjeta-relatividad">
+                    <div class="tarjeta-superior">
+                        <span class="numero">02</span>
+                        <span class="icono-tema">◉</span>
+                        <span class="indicador">↗</span>
+                    </div>
 
-                <span class="ver-tema">
-                    Ver tema →
-                </span>
+                    <div class="arte arte-relatividad" aria-hidden="true">
+                        <div class="espacio-onda onda-a"></div>
+                        <div class="espacio-onda onda-b"></div>
+                        <div class="espacio-onda onda-c"></div>
+                        <div class="centro-espacio"></div>
+                    </div>
 
+                    <div class="tarjeta-contenido">
+                        <p class="categoria">ESPACIO Y TIEMPO</p>
+                        <h3>Teoría relativista</h3>
+                        <p>
+                            Explora cómo la velocidad, el espacio,
+                            el tiempo y la gravedad están relacionados.
+                        </p>
+
+                        <div class="pie-tarjeta">
+                            <span>EXPLORAR TEMA</span>
+                            <span class="flecha">⟶</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Tema 3 -->
+                <a href="tema3.html" class="tarjeta tarjeta-cuantica">
+                    <div class="tarjeta-superior">
+                        <span class="numero">03</span>
+                        <span class="icono-tema">⚛</span>
+                        <span class="indicador">↗</span>
+                    </div>
+
+                    <div class="arte arte-cuantica" aria-hidden="true">
+                        <div class="orbita-cuantica orbita-cuantica-a"></div>
+                        <div class="orbita-cuantica orbita-cuantica-b"></div>
+                        <div class="orbita-cuantica orbita-cuantica-c"></div>
+                        <div class="nucleo-cuantico"></div>
+                        <span class="electron electron-a"></span>
+                        <span class="electron electron-b"></span>
+                        <span class="electron electron-c"></span>
+                    </div>
+
+                    <div class="tarjeta-contenido">
+                        <p class="categoria">MATERIA Y ENERGÍA</p>
+                        <h3>Teoría cuántica</h3>
+                        <p>
+                            Adéntrate en el mundo microscópico
+                            de las partículas y sus propiedades.
+                        </p>
+
+                        <div class="pie-tarjeta">
+                            <span>EXPLORAR TEMA</span>
+                            <span class="flecha">⟶</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Tema 4 -->
+                <a href="tema4.html" class="tarjeta tarjeta-unificacion">
+                    <div class="tarjeta-superior">
+                        <span class="numero">04</span>
+                        <span class="icono-tema">⌘</span>
+                        <span class="indicador">↗</span>
+                    </div>
+
+                    <div class="arte arte-unificacion" aria-hidden="true">
+                        <div class="conexion conexion-a"></div>
+                        <div class="conexion conexion-b"></div>
+                        <div class="conexion conexion-c"></div>
+                        <div class="conexion conexion-d"></div>
+                        <div class="nodo nodo-a"></div>
+                        <div class="nodo nodo-b"></div>
+                        <div class="nodo nodo-c"></div>
+                        <div class="nodo nodo-d"></div>
+                        <div class="nodo nodo-central"></div>
+                    </div>
+
+                    <div class="tarjeta-contenido">
+                        <p class="categoria">FUERZAS FUNDAMENTALES</p>
+                        <h3>Teorías de unificación</h3>
+                        <p>
+                            Conoce los intentos de integrar las
+                            interacciones fundamentales en un marco común.
+                        </p>
+
+                        <div class="pie-tarjeta">
+                            <span>EXPLORAR TEMA</span>
+                            <span class="flecha">⟶</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Regresar a la portada -->
+        <div class="regreso">
+            <a href="index.html" class="boton-regresar">
+                <span>←</span>
+                VOLVER A LA PORTADA
             </a>
-
-
-            <!-- TEMA 2 -->
-
-            <a href="tema2.html" class="tarjeta-tema">
-
-                <span class="numero-tema">
-                    02
-                </span>
-
-                <h3>
-                    Teoría relativista
-                </h3>
-
-                <p>
-                    Explora las ideas de la relatividad
-                    especial y general y su relación
-                    con el espacio, el tiempo y la gravedad.
-                </p>
-
-                <span class="ver-tema">
-                    Ver tema →
-                </span>
-
-            </a>
-
-
-            <!-- TEMA 3 -->
-
-            <a href="tema3.html" class="tarjeta-tema">
-
-                <span class="numero-tema">
-                    03
-                </span>
-
-                <h3>
-                    Teoría cuántica
-                </h3>
-
-                <p>
-                    Conoce los principios que permiten
-                    explicar el comportamiento de la
-                    materia y la energía a escala microscópica.
-                </p>
-
-                <span class="ver-tema">
-                    Ver tema →
-                </span>
-
-            </a>
-
-
-            <!-- TEMA 4 -->
-
-            <a href="tema4.html" class="tarjeta-tema">
-
-                <span class="numero-tema">
-                    04
-                </span>
-
-                <h3>
-                    Teorías de unificación
-                </h3>
-
-                <p>
-                    Explora los intentos de encontrar
-                    un marco común para explicar las
-                    diferentes interacciones fundamentales.
-                </p>
-
-                <span class="ver-tema">
-                    Ver tema →
-                </span>
-
-            </a>
-
         </div>
-
-
-        <!-- =========================
-             VOLVER A PORTADA
-        ========================== -->
-
-        <a href="index.html" class="boton-regresar">
-            ← Volver al Inicio
-        </a>
 
     </main>
 
-
-    <!-- =========================
-         PIE DE PÁGINA
-    ========================== -->
-
-    <footer>
-
-        <p>
-           @Instituto Tecnológico de Tuxtla Gutiérrez
-        </p>
-
-        <p>
-            Proyecto de Fundamentos de Física
-        </p>
-
+    <footer class="pie-menu">
+        <span>TECNM · TUXTLA GUTIÉRREZ, CHIAPAS</span>
+        <span>FUNDAMENTOS DE FÍSICA · PROYECTO ACADÉMICO</span>
     </footer>
 
-
+    <script src="temas.js"></script>
 </body>
-
 </html>
+
+
+
+
+

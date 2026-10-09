@@ -1,0 +1,737 @@
+
+/* ========================================
+   PORTADA FUTURISTA - FUNDAMENTOS DE FÍSICA
+======================================== */
+
+:root {
+    --fondo: #030713;
+    --cyan: #00f5ff;
+    --azul: #4287ff;
+    --violeta: #a855f7;
+    --blanco: #f5fbff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--fondo);
+    color: var(--blanco);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Fondo espacial */
+
+.fondo-espacial {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 50% 45%,
+            #0a1d3a 0%, #050c1d 42%, #02040c 100%);
+}
+
+#particulas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.nebulosa {
+    position: absolute;
+    width: 55vw;
+    height: 55vw;
+    max-width: 750px;
+    max-height: 750px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.18;
+    animation: nebulosa-flota 15s ease-in-out infinite alternate;
+}
+
+.nebulosa-uno {
+    top: -25%;
+    left: -20%;
+    background: #075bff;
+}
+
+.nebulosa-dos {
+    right: -20%;
+    bottom: -35%;
+    background: #8b19ff;
+    animation-delay: -7s;
+}
+
+.rejilla {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background-image:
+        linear-gradient(#1d9bce 1px, transparent 1px),
+        linear-gradient(90deg, #1d9bce 1px, transparent 1px);
+    background-size: 65px 65px;
+    mask-image: linear-gradient(transparent, black 30%, black 80%, transparent);
+    animation: rejilla-movimiento 25s linear infinite;
+}
+
+@keyframes nebulosa-flota {
+    from {
+        transform: translate3d(-3%, -2%, 0) scale(0.9);
+    }
+    to {
+        transform: translate3d(5%, 4%, 0) scale(1.12);
+    }
+}
+
+@keyframes rejilla-movimiento {
+    from { background-position: 0 0; }
+    to { background-position: 65px 65px; }
+}
+
+/* Barra superior */
+
+.barra-superior {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 7%;
+    border-bottom: 1px solid rgba(0, 245, 255, 0.13);
+    background: rgba(3, 7, 19, 0.4);
+    backdrop-filter: blur(12px);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.marca-icono {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--cyan);
+    border-radius: 10px;
+    color: var(--cyan);
+    font-size: 23px;
+    box-shadow: 0 0 18px #00f5ff35;
+}
+
+.marca-punto {
+    color: var(--cyan);
+}
+
+.estado {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #a8bbd4;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.estado-luz,
+.insignia-punto {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 12px var(--cyan);
+    animation: luz-pulso 2s ease-in-out infinite;
+}
+
+@keyframes luz-pulso {
+    50% { opacity: 0.35; }
+}
+
+/* Composición principal */
+
+.portada {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    min-height: calc(100vh - 125px);
+    place-items: center;
+    padding: 55px 20px 70px;
+    isolation: isolate;
+}
+
+.hero {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: min(100%, 1000px);
+    text-align: center;
+}
+
+.insignia {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border: 1px solid #00f5ff38;
+    border-radius: 50px;
+    background: #00f5ff0b;
+    color: #a8dfe9;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* Logo con anillos */
+
+.logo-contenedor {
+    position: relative;
+    display: grid;
+    width: 155px;
+    height: 155px;
+    margin: 36px 0 25px;
+    place-items: center;
+}
+
+.logo-marco {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    width: 105px;
+    height: 105px;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid #00f5ff65;
+    border-radius: 50%;
+    background: rgba(5, 16, 36, 0.88);
+    box-shadow:
+        0 0 22px #00f5ff30,
+        inset 0 0 25px #4287ff20;
+    animation: logo-flota 4s ease-in-out infinite;
+}
+
+.logo {
+    width: 78%;
+    height: 78%;
+    object-fit: contain;
+}
+
+.logo-anillo {
+    position: absolute;
+    inset: 4px;
+    border: 1px solid #00f5ff35;
+    border-radius: 50%;
+}
+
+.anillo-uno {
+    animation: anillo-giro 12s linear infinite;
+}
+
+.anillo-dos {
+    inset: -8px;
+    border-color: #a855f75c;
+    border-style: dashed;
+    animation: anillo-giro 22s linear infinite reverse;
+}
+
+@keyframes anillo-giro {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes logo-flota {
+    50% { transform: translateY(-7px); }
+}
+
+.sobrelinea {
+    color: #8aa9d0;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+/* Título */
+
+.titulo {
+    margin-top: 22px;
+    font-size: clamp(43px, 8vw, 88px);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -3px;
+    text-shadow: 0 0 35px #4287ff19;
+}
+
+.titulo > span {
+    display: block;
+    margin-top: 9px;
+}
+
+.texto-neon {
+    color: var(--cyan);
+    text-shadow:
+        0 0 10px #00f5ff8c,
+        0 0 35px #00f5ff35;
+    animation: neon-resplandor 4s ease-in-out infinite;
+}
+
+@keyframes neon-resplandor {
+    50% {
+        text-shadow:
+            0 0 18px #00f5ffbd,
+            0 0 48px #00f5ff65;
+    }
+}
+
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 27px 0 19px;
+    color: var(--cyan);
+}
+
+.separador span {
+    width: 75px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan));
+}
+
+.separador span:last-child {
+    transform: rotate(180deg);
+}
+
+.separador i {
+    font-size: 14px;
+    font-style: normal;
+    animation: estrella-giro 8s linear infinite;
+}
+
+@keyframes estrella-giro {
+    to { transform: rotate(360deg); }
+}
+
+.descripcion {
+    max-width: 610px;
+    color: #b2c1d6;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Cuatro temas */
+
+.datos-ciencia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 23px;
+    margin-top: 33px;
+}
+
+.dato {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dato-simbolo {
+    color: var(--cyan);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.dato-texto {
+    color: #94a9c5;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+}
+
+.dato-linea {
+    width: 1px;
+    height: 27px;
+    background: #6c8fb355;
+}
+
+/* Botón */
+
+.boton-entrada {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-width: 260px;
+    margin-top: 39px;
+    padding: 18px 25px;
+    overflow: hidden;
+    border: 1px solid var(--cyan);
+    border-radius: 9px;
+    background: linear-gradient(110deg, #073b65, #09254c);
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    box-shadow:
+        0 0 18px #00f5ff20,
+        inset 0 0 18px #00f5ff0c;
+    transition: transform 0.3s ease, background 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.boton-brillo {
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, transparent, #ffffff38, transparent
+    );
+    transform: skewX(-25deg);
+    animation: boton-destello 4s ease-in-out infinite;
+}
+
+@keyframes boton-destello {
+    0%, 35% { left: -120%; }
+    70%, 100% { left: 150%; }
+}
+
+.boton-texto,
+.boton-flecha {
+    position: relative;
+    z-index: 1;
+}
+
+.boton-flecha {
+    color: var(--cyan);
+    font-size: 19px;
+    transition: transform 0.3s ease;
+}
+
+.boton-entrada:hover {
+    transform: translateY(-5px) scale(1.025);
+    background: #07517a;
+    box-shadow:
+        0 0 20px #00f5ff65,
+        0 0 45px #00f5ff25;
+}
+
+.boton-entrada:hover .boton-flecha {
+    transform: translate(4px, -4px);
+}
+
+.nota {
+    margin-top: 17px;
+    color: #607792;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* Órbitas decorativas */
+
+.orbita {
+    position: absolute;
+    z-index: 1;
+    width: 220px;
+    height: 220px;
+    border: 1px solid #00f5ff18;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: orbita-giro 20s linear infinite;
+}
+
+.orbita-izquierda {
+    left: -95px;
+    top: 24%;
+}
+
+.orbita-derecha {
+    right: -95px;
+    bottom: 12%;
+    width: 280px;
+    height: 280px;
+    border-color: #a855f72b;
+    animation-duration: 28s;
+    animation-direction: reverse;
+}
+
+.orbita-punto {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 15px var(--cyan);
+}
+
+.orbita-derecha .orbita-punto {
+    background: #c084fc;
+    box-shadow: 0 0 15px #c084fc;
+}
+
+@keyframes orbita-giro {
+    to { transform: rotate(360deg); }
+}
+
+.simbolo-flotante {
+    position: absolute;
+    z-index: 1;
+    color: #5bc9ff52;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    pointer-events: none;
+    animation: simbolo-flota 6s ease-in-out infinite;
+}
+
+.simbolo-uno {
+    left: 13%;
+    top: 20%;
+}
+
+.simbolo-dos {
+    right: 14%;
+    top: 26%;
+    color: #c084fc65;
+    animation-delay: -2s;
+}
+
+.simbolo-tres {
+    left: 18%;
+    bottom: 18%;
+    animation-delay: -4s;
+}
+
+.simbolo-cuatro {
+    right: 11%;
+    bottom: 22%;
+    color: #00f5ff70;
+    font-size: 18px;
+    animation-delay: -1s;
+}
+
+@keyframes simbolo-flota {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-18px) rotate(7deg); }
+}
+
+/* Entrada animada */
+
+.entrada {
+    opacity: 0;
+    animation: aparecer 0.9s ease-out forwards;
+}
+
+.retraso-uno { animation-delay: 0.15s; }
+.retraso-dos { animation-delay: 0.35s; }
+.retraso-tres { animation-delay: 0.55s; }
+.retraso-cuatro { animation-delay: 0.75s; }
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pie de página */
+
+.pie {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 7%;
+    border-top: 1px solid #00f5ff18;
+    color: #6f829c;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.pie-punto {
+    color: var(--cyan);
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 650px) {
+    .barra-superior {
+        padding: 17px 20px;
+    }
+
+    .estado {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .portada {
+        min-height: auto;
+        padding: 50px 20px 60px;
+    }
+
+    .logo-contenedor {
+        margin-top: 28px;
+    }
+
+    .sobrelinea {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .titulo {
+        letter-spacing: -1.5px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+    }
+
+    .datos-ciencia {
+        gap: 14px;
+    }
+
+    .dato-texto {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .dato-linea {
+        height: 22px;
+    }
+
+    .orbita {
+        opacity: 0.45;
+    }
+
+    .simbolo-uno { left: 4%; }
+    .simbolo-dos { right: 5%; }
+    .simbolo-tres { left: 5%; }
+    .simbolo-cuatro { right: 4%; font-size: 13px; }
+
+    .pie {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 380px) {
+    .estado {
+        display: none;
+    }
+
+    .datos-ciencia {
+        gap: 10px;
+    }
+
+    .dato-texto {
+        font-size: 7px;
+    }
+
+    .boton-entrada {
+        min-width: 240px;
+    }
+}
+
+/* Respeta a quien prefiera menos movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==============================
+   INTEGRANTES DEL EQUIPO
+============================== */
+
+.integrantes {
+    width: min(850px, 90%);
+    margin: 50px auto 30px;
+    padding: 24px;
+    text-align: center;
+
+    background: rgba(5, 17, 45, 0.88);
+    border: 1px solid #00d9ff;
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 12px rgba(0, 217, 255, 0.25),
+        inset 0 0 15px rgba(0, 217, 255, 0.06);
+}
+
+.integrantes h2 {
+    margin: 0 0 20px;
+    color: #00e5ff;
+    font-size: 25px;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.65);
+}
+
+.lista-integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.lista-integrantes p {
+    margin: 0;
+    padding: 12px 18px;
+
+    color: #ffffff;
+    background: rgba(0, 217, 255, 0.08);
+    border: 1px solid rgba(0, 217, 255, 0.55);
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.lista-integrantes p:hover {
+    transform: translateY(-4px);
+    border-color: #ffffff;
+    box-shadow: 0 0 14px rgba(0, 217, 255, 0.6);
+}
+
+@media (max-width: 600px) {
+    .integrantes {
+        padding: 18px 12px;
+    }
+
+    .integrantes h2 {
+        font-size: 21px;
+    }
+
+    .lista-integrantes {
+        flex-direction: column;
+    }
+}

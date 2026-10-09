@@ -1,114 +1,160 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Proyecto de Física</title>
+    <title>Fundamentos de Física | TecNM Tuxtla</title>
 
-    <!-- Conexión con el archivo CSS -->
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="description"
+          content="Proyecto interactivo de Fundamentos de Física del Instituto Tecnológico de Tuxtla Gutiérrez.">
+
+    <link rel="stylesheet" href="portada.css">
 </head>
 
 <body>
-
-    <!-- =========================
-         PORTADA
-    ========================== -->
-
-    <div class="portada">
-
-        <div class="portada-contenido">
-
-            <!-- LOGOTIPO -->
-            <div class="logo-contenedor">
-                <!-- Aquí colocaremos posteriormente el logo -->
-                <img src="Tec-Tuxtla_Logo.svg.webp"
-                     alt="Instituto Tecnologico De Tuxtla Gutierrez Chiapas
-                     TecNM"
-                     class="logo">
-            </div>
-
-
-            <!-- INSTITUCIÓN -->
-
-            <h1>
-                Instituto Tecnológico de Tuxtla Gutiérrez
-            </h1>
-
-            <h2>
-                Fundamentos de Física
-            </h2>
-
-
-            <div class="linea"></div>
-
-
-            <!-- TÍTULO DEL PROYECTO -->
-
-            <h3>
-                Proyecto de Física
-            </h3>
-
-            <p class="descripcion-portada">
-                Física clásica, teoría relativista, teoría cuántica
-                y teorías de unificación de la física.
-            </p>
-
-
-            <!-- DATOS DEL EQUIPO -->
-
-            <div class="datos-equipo">
-
-                <h3>
-                    Datos del equipo
-                </h3>
-
-                <p>
-                    <strong>Integrantes:</strong>
-                </p>
-
-                <p>• Camila del Carmen Camacho Herrera</p>
-                <p>• Helen Macias de la Cruz</p>
-                <p>•Carlos Mario Cruz de la Cruz </p>
-                <p>° Franisco Daribel Roblero Ramirez</p>
-
-
-                <p>
-                    <strong>Grupo:</strong>
-                    G1A
-                </p>
-
-                <p>
-                    <strong>Docente:</strong>
-                    Carlos Diaz Rodriguez
-                </p>
-
-                <p>
-                    <strong>Carrera:</strong>
-                    Ingeniería en Gestión Empresarial
-                </p>
-
-                <p>
-                    <strong>Fecha:</strong>
-                    04/10/2026
-                </p>
-
-            </div>
-
-
-            <!-- BOTÓN PARA ENTRAR -->
-
-            <a href="temas.html" class="boton-principal">
-                Menu →
-            </a>
-
-        </div>
-
+    <!-- Fondo animado -->
+    <div class="fondo-espacial" aria-hidden="true">
+        <div class="nebulosa nebulosa-uno"></div>
+        <div class="nebulosa nebulosa-dos"></div>
+        <div class="rejilla"></div>
+        <canvas id="particulas"></canvas>
     </div>
 
+    <!-- Barra superior -->
+    <header class="barra-superior">
+        <a href="index.html" class="marca">
+            <span class="marca-icono">Φ</span>
+            <span>FÍSICA<span class="marca-punto">.</span></span>
+        </a>
 
+        <span class="estado">
+            <span class="estado-luz"></span>
+            PROYECTO INTERACTIVO
+        </span>
+    </header>
+
+    <!-- Portada principal -->
+    <main class="portada">
+        <section class="hero">
+
+            <div class="insignia entrada">
+                <span class="insignia-punto"></span>
+                INSTITUTO TECNOLÓGICO NACIONAL DE MÉXICO
+            </div>
+
+            <div class="logo-contenedor entrada retraso-uno">
+                <div class="logo-anillo anillo-uno"></div>
+                <div class="logo-anillo anillo-dos"></div>
+
+                <div class="logo-marco">
+                    <img
+                        src="Tec-Tuxtla_Logo.svg.webp"
+                        alt="Logotipo del Instituto Tecnológico de Tuxtla Gutiérrez"
+                        class="logo"
+                    >
+                </div>
+            </div>
+
+            <p class="sobrelinea entrada retraso-uno">
+                INSTITUTO TECNOLÓGICO DE TUXTLA GUTIÉRREZ
+            </p>
+
+            <h1 class="titulo entrada retraso-dos">
+                FUNDAMENTOS
+                <span>DE <span class="texto-neon">FÍSICA</span></span>
+            </h1>
+
+            <div class="separador entrada retraso-dos">
+                <span></span>
+                <i>✦</i>
+                <span></span>
+            </div>
+
+            <p class="descripcion entrada retraso-tres">
+                Explora las leyes que explican el universo.
+                Desde el movimiento de los cuerpos hasta los misterios
+                de las partículas y las fuerzas fundamentales.
+            </p>
+
+            
+<!-- INTEGRANTES DEL EQUIPO -->
+<section class="integrantes">
+    <h2>Integrantes del equipo</h2>
+
+    <div class="lista-integrantes">
+        <p>Camila del Carmen Camacho Herrera</p>
+        <p>Helena Mazias de la Cruz</p>
+        <p>Carlos Mario Cruz de la Cruz</p>
+        <p>Francisco Daribel Roblero Ramirez</p>
+    </div>
+</section>
+
+            <!-- Indicadores visuales -->
+            <div class="datos-ciencia entrada retraso-tres">
+                <div class="dato">
+                    <span class="dato-simbolo">01</span>
+                    <span class="dato-texto">CLÁSICA</span>
+                </div>
+
+                <span class="dato-linea"></span>
+
+                <div class="dato">
+                    <span class="dato-simbolo">02</span>
+                    <span class="dato-texto">RELATIVIDAD</span>
+                </div>
+
+                <span class="dato-linea"></span>
+
+                <div class="dato">
+                    <span class="dato-simbolo">03</span>
+                    <span class="dato-texto">CUÁNTICA</span>
+                </div>
+
+                <span class="dato-linea"></span>
+
+                <div class="dato">
+                    <span class="dato-simbolo">04</span>
+                    <span class="dato-texto">UNIFICACIÓN</span>
+                </div>
+            </div>
+
+            <!-- Botón de entrada -->
+            <a href="temas.html" class="boton-entrada entrada retraso-cuatro">
+                <span class="boton-brillo"></span>
+                <span class="boton-texto">EXPLORAR PROYECTO</span>
+                <span class="boton-flecha">↗</span>
+            </a>
+
+            <p class="nota entrada retraso-cuatro">
+                CUATRO TEMAS · UNA EXPLORACIÓN DEL UNIVERSO
+            </p>
+        </section>
+
+        <!-- Elementos decorativos -->
+        <div class="orbita orbita-izquierda" aria-hidden="true">
+            <span class="orbita-punto"></span>
+        </div>
+
+        <div class="orbita orbita-derecha" aria-hidden="true">
+            <span class="orbita-punto"></span>
+        </div>
+
+        <div class="simbolo-flotante simbolo-uno" aria-hidden="true">λ</div>
+        <div class="simbolo-flotante simbolo-dos" aria-hidden="true">∑</div>
+        <div class="simbolo-flotante simbolo-tres" aria-hidden="true">∞</div>
+        <div class="simbolo-flotante simbolo-cuatro" aria-hidden="true">E = mc²</div>
+    </main>
+
+    <footer class="pie">
+        <span>TECNM · TUXTLA GUTIÉRREZ, CHIAPAS</span>
+        <span>CIENCIA <span class="pie-punto">×</span> MOVIMIENTO <span class="pie-punto">×</span> UNIVERSO</span>
+    </footer>
+
+    <script src="script.js"></script>
+    
+
+</div>
 </body>
-
 </html>
